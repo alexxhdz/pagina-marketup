@@ -79,7 +79,8 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-body-contenedorblast">
-                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/1.png" alt="Diseño de Branding" width="150px">
+                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/1.png" alt="Diseño de Branding"
+                        width="150px">
                 </div>
                 <h1 class="card-body-title">Diseño de <span>Branding</span></h1>
             </div>
@@ -92,7 +93,8 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-body-contenedorblast">
-                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/2.png" alt="Gestion de redes sociales" width="150px">
+                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/2.png"
+                        alt="Gestion de redes sociales" width="150px">
                 </div>
                 <h1 class="card-body-title">Gestion de <span>redes sociales</span></h1>
             </div>
@@ -105,7 +107,8 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-body-contenedorblast">
-                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/3.png" alt="Campañas ADS Facebook y Google" width="150px">
+                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/3.png"
+                        alt="Campañas ADS Facebook y Google" width="150px">
                 </div>
                 <h1 class="card-body-title">Campañas ADS <span>Facebook y Google</span></h1>
             </div>
@@ -118,7 +121,8 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-body-contenedorblast">
-                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/4.png" alt="Diseño y creacion de pagina web" width="150px">
+                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/4.png"
+                        alt="Diseño y creacion de pagina web" width="150px">
                 </div>
                 <h1 class="card-body-title">Diseño y creación de <span>Página web</span></h1>
             </div>
@@ -131,7 +135,8 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-body-contenedorblast">
-                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/5.png" alt="Fotografia y video profesional" width="150px">
+                    <img class="card-body-contenedorblast-img" src="/IMG/Servicios/5.png"
+                        alt="Fotografia y video profesional" width="150px">
                 </div>
                 <h1 class="card-body-title">Fotografía y <span>vídeo profesional</span></h1>
             </div>
@@ -160,7 +165,9 @@
             colaboración constante con
             los clientes
         </p>
-        <img src="/IMG/3.png" alt="Imagen ilustrativa">
+        <div class="img-caja">
+            <img src="/IMG/3.png" alt="Imagen ilustrativa">
+        </div>
         <p>
             En resumen, MarketUP se
             enfoca en comprender las
@@ -181,28 +188,27 @@
     </div>
 
     <div class="contacto">
-        <div class="imagen-caja">
+        <div class="img-caja">
             <img src="/IMG/5.png" alt="Imagen ilustrativa">
         </div>
-        <div class="area-contacto">
-            <form action="/enviar.php" method="post">
-                <input placeholder="Nombre" type="text" id="nombre" name="nombre" required>
-                <input placeholder="Apellido" type="text" id="apellido" name="apellido" required>
-                <input placeholder="Correo" type="email" id="correo" name="correo" required>
-                <input placeholder="Nombre de proyecto o marca" type="text" id="proyecto" name="proyecto" required>
-                <label for="servicio">Selecciona un servicio:</label>
-                <select id="servicio" name="servicio" required>
-                    <option value="branding">Branding</option>
-                    <option value="redes_sociales">Redes Sociales</option>
-                    <option value="campanas_ads">Campañas ADS</option>
-                    <option value="desarrollo_web">Desarrollo Web</option>
-                    <option value="fotografia_video">Fotografía y Video</option>
-                    <option value="plan_completo">Plan Completo</option>
-                </select>
-                <textarea placeholder="Cuéntanos acerca de tu proyecto:" id="proyecto_desc" name="proyecto_desc" rows="5" cols="30"></textarea>
-                <input class="btn-enviar" type="submit" value="Enviar">
-            </form>
-        </div>
+        <form action="/enviar.php" method="post">
+            <input placeholder="Nombre" type="text" id="nombre" name="nombre" required>
+            <input placeholder="Apellido" type="text" id="apellido" name="apellido" required>
+            <input placeholder="Correo" type="email" id="correo" name="correo" required>
+            <input placeholder="Nombre de proyecto o marca" type="text" id="proyecto" name="proyecto" required>
+            <label for="servicio">Selecciona un servicio:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="branding">Branding</option>
+                <option value="redes_sociales">Redes Sociales</option>
+                <option value="campanas_ads">Campañas ADS</option>
+                <option value="desarrollo_web">Desarrollo Web</option>
+                <option value="fotografia_video">Fotografía y Video</option>
+                <option value="plan_completo">Plan Completo</option>
+            </select>
+            <textarea placeholder="Cuéntanos acerca de tu proyecto:" id="proyecto_desc" name="proyecto_desc" rows="5"
+                cols="30"></textarea>
+            <input class="btn-enviar" type="submit" value="Enviar">
+        </form>
     </div>
 
     <div class="titulos">
@@ -214,8 +220,10 @@
             <img src="/IMG/6.png" alt="Imagen ilustrativa">
         </div>
         <div class="redes-sociales">
-            <a target="_blank" href="https://www.instagram.com/marketup.mx/"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a target="_blank" href="https://www.facebook.com/marketup.agencia"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a target="_blank" href="https://www.instagram.com/marketup.mx/"><ion-icon
+                    name="logo-instagram"></ion-icon></a>
+            <a target="_blank" href="https://www.facebook.com/marketup.agencia"><ion-icon
+                    name="logo-facebook"></ion-icon></a>
             <a target="_blank" href="https://www.tiktok.com/@marketupmx"><ion-icon name="logo-tiktok"></ion-icon></a>
         </div>
     </div>

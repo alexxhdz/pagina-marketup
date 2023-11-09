@@ -15,9 +15,11 @@ p {
     justify-content: center;
     padding: 10px;
     margin: 10px;
+
     h2 {
         font-size: 30px;
         text-align: center;
+
         span {
             color: #247DE1;
         }
@@ -52,8 +54,7 @@ p {
 
 @mixin imagen() {
     width: 500px;
-    padding: 60px;
-    margin: 20px;
+    padding: 10px;
 }
 
 @mixin boton() {
@@ -200,8 +201,8 @@ body {
 
         .card {
             background-color: white;
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 450px;
             overflow: hidden;
             border: 2px solid black;
             margin: 20px;
@@ -222,8 +223,10 @@ body {
 
                 &-title {
                     margin-top: 2rem;
+                    margin-bottom: 1rem;
                     font-size: 2rem;
                     text-align: center;
+                    padding: 15px;
                 }
 
                 &-contenedorblast {
@@ -267,43 +270,30 @@ body {
     .contacto {
         @include contenedor();
         background-color: #000000;
-        .imagen-caja{
+
+        .imagen-caja {
             @include img-cajas();
+
             img {
                 @include imagen();
             }
         }
-        
 
-        .area-contacto {
-            background-color: #000000;
-            color: #fff;
-            padding: 10px;
-            margin: 10px;
-            width: 50%;
+        form {
+            @include caja();
+            select,
+            input,
+            textarea {
+                margin: 10px;
+                width: 100%;
+                padding: 15px;
+                color: #5e5e5e;
+                border: none;
+                font-family: sans-serif;
+            }
 
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px;
-                
-
-                select,
-                input,
-                textarea {
-                    margin: 10px;
-                    width: 100%;
-                    padding: 15px;
-                    color: #5e5e5e;
-                    border: none;
-                    font-family: sans-serif;
-                }
-
-                .btn-enviar {
-                    @include boton();
-                }
+            .btn-enviar {
+                @include boton();
             }
         }
     }
@@ -354,53 +344,105 @@ body {
 }
 
 @media (max-width: 680px) {
-    header{
+    header {
         visibility: hidden;
     }
 
-    main{
+    main {
         flex-direction: column;
         height: 100% !important;
+
         .txt-main {
             width: 100% !important;
         }
+
+        .img-caja {
+            img {
+                width: 300px !important;
+            }
+
+        }
     }
 
-    .acerca{
+    .acerca {
         flex-direction: column;
         height: 100% !important;
-        .txt-acerca{
+
+        .txt-acerca {
+            width: 100% !important;
+        }
+
+        .img-caja {
+            img {
+                width: 300px !important;
+            }
+
+        }
+    }
+
+    .servicios {
+        flex-direction: column;
+        height: 100% !important;
+        flex-direction: column;
+        height: 100% !important;
+
+        .txt-servicios {
             width: 100% !important;
         }
     }
 
-    .servicios{
+    .trabajo {
         flex-direction: column;
         height: 100% !important;
-        flex-direction: column;
-        height: 100% !important;
-        .txt-servicios{
-            width: 100% !important;
+
+        .img-caja {
+            img {
+                width: 300px !important;
+            }
+
         }
     }
 
-    .trabajo{
+    .contacto {
         flex-direction: column;
         height: 100% !important;
-    }
 
-    .contacto{
-        flex-direction: column;
-        height: 100% !important;
-        .area-contacto {
-            width: 100% !important;
+        .img-caja {
+            img {
+                width: 300px !important;
+            }
+
         }
-            
 
+        form {
+            padding: 10px;
+            width: 100% !important;
+            select,
+            input,
+            textarea {
+                margin: 10px;
+                width: 80%;
+                padding: 15px;
+                color: #5e5e5e;
+                border: none;
+                font-family: sans-serif;
+            }
+
+            .btn-enviar {
+                @include boton();
+            }
+        }
     }
 
-    .redes{
+    .redes {
         flex-direction: column;
         height: 100% !important;
+
+        .img-caja {
+            img {
+                width: 300px !important;
+            }
+
+        }
     }
 }

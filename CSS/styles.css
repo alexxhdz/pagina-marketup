@@ -129,8 +129,7 @@ body main .img-caja {
 }
 body main .img-caja img {
   width: 500px;
-  padding: 60px;
-  margin: 20px;
+  padding: 10px;
 }
 body .acerca {
   display: flex;
@@ -156,8 +155,7 @@ body .acerca .img-caja {
 }
 body .acerca .img-caja img {
   width: 500px;
-  padding: 60px;
-  margin: 20px;
+  padding: 10px;
 }
 body .servicios {
   display: flex;
@@ -170,8 +168,8 @@ body .servicios {
 }
 body .servicios .card {
   background-color: white;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 450px;
   overflow: hidden;
   border: 2px solid black;
   margin: 20px;
@@ -191,8 +189,10 @@ body .servicios .card-body {
 }
 body .servicios .card-body-title {
   margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   text-align: center;
+  padding: 15px;
 }
 body .servicios .card-body-contenedorblast {
   border-radius: 50%;
@@ -236,8 +236,7 @@ body .trabajo p {
 }
 body .trabajo img {
   width: 500px;
-  padding: 60px;
-  margin: 20px;
+  padding: 10px;
 }
 body .contacto {
   display: flex;
@@ -255,26 +254,20 @@ body .contacto .imagen-caja {
 }
 body .contacto .imagen-caja img {
   width: 500px;
-  padding: 60px;
-  margin: 20px;
-}
-body .contacto .area-contacto {
-  background-color: #000000;
-  color: #fff;
   padding: 10px;
-  margin: 10px;
+}
+body .contacto form {
   width: 50%;
-}
-body .contacto .area-contacto form {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
 }
-body .contacto .area-contacto form select,
-body .contacto .area-contacto form input,
-body .contacto .area-contacto form textarea {
+body .contacto form select,
+body .contacto form input,
+body .contacto form textarea {
   margin: 10px;
   width: 100%;
   padding: 15px;
@@ -282,7 +275,7 @@ body .contacto .area-contacto form textarea {
   border: none;
   font-family: sans-serif;
 }
-body .contacto .area-contacto form .btn-enviar {
+body .contacto form .btn-enviar {
   background-color: #247DE1;
   border: none;
   color: #ffffff;
@@ -290,10 +283,10 @@ body .contacto .area-contacto form .btn-enviar {
   margin: 15px;
   text-decoration: none;
 }
-body .contacto .area-contacto form .btn-enviar:hover {
+body .contacto form .btn-enviar:hover {
   background-color: #1262be;
 }
-body .contacto .area-contacto form .btn-enviar:active {
+body .contacto form .btn-enviar:active {
   background-color: #E447A5;
 }
 body .redes {
@@ -314,8 +307,7 @@ body .redes .img-caja {
 }
 body .redes .img-caja img {
   width: 500px;
-  padding: 60px;
-  margin: 20px;
+  padding: 10px;
 }
 body .redes .redes-sociales {
   width: 50%;
@@ -357,12 +349,18 @@ body footer {
   main .txt-main {
     width: 100% !important;
   }
+  main .img-caja img {
+    width: 300px !important;
+  }
   .acerca {
     flex-direction: column;
     height: 100% !important;
   }
   .acerca .txt-acerca {
     width: 100% !important;
+  }
+  .acerca .img-caja img {
+    width: 300px !important;
   }
   .servicios {
     flex-direction: column;
@@ -377,15 +375,49 @@ body footer {
     flex-direction: column;
     height: 100% !important;
   }
+  .trabajo .img-caja img {
+    width: 300px !important;
+  }
   .contacto {
     flex-direction: column;
     height: 100% !important;
   }
-  .contacto .area-contacto {
+  .contacto .img-caja img {
+    width: 300px !important;
+  }
+  .contacto form {
+    padding: 10px;
     width: 100% !important;
+  }
+  .contacto form select,
+  .contacto form input,
+  .contacto form textarea {
+    margin: 10px;
+    width: 80%;
+    padding: 15px;
+    color: #5e5e5e;
+    border: none;
+    font-family: sans-serif;
+  }
+  .contacto form .btn-enviar {
+    background-color: #247DE1;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    margin: 15px;
+    text-decoration: none;
+  }
+  .contacto form .btn-enviar:hover {
+    background-color: #1262be;
+  }
+  .contacto form .btn-enviar:active {
+    background-color: #E447A5;
   }
   .redes {
     flex-direction: column;
     height: 100% !important;
+  }
+  .redes .img-caja img {
+    width: 300px !important;
   }
 }/*# sourceMappingURL=styles.css.map */
