@@ -1,0 +1,406 @@
+@font-face {
+    font-family: 'Mont Bold';
+    src: url('/FUENTES/FontsFree-Net-Mont-Bold.ttf') format('truetype');
+}
+
+p {
+    font-family: sans-serif;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.titulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        span {
+            color: #247DE1;
+        }
+    }
+
+}
+
+@mixin contenedor() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 100%;
+}
+
+@mixin caja() {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+}
+
+@mixin img-cajas() {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin imagen() {
+    width: 500px;
+    padding: 60px;
+    margin: 20px;
+}
+
+@mixin boton() {
+    background-color: #247DE1;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    margin: 15px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #1262be;
+    }
+
+    &:active {
+        background-color: #E447A5;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mont Bold', sans-serif;
+}
+
+body {
+
+    span {
+        color: #247DE1;
+    }
+
+    .btn-whatsapp {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+
+        ion-icon {
+            font-size: 50px;
+            margin: 20px;
+            color: rgb(46, 187, 27);
+        }
+    }
+
+    .banner {
+        background-image: url(/IMG/14.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 60px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid white;
+            color: #ffffff;
+        }
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #000000;
+        position: sticky;
+        top: 0;
+
+        img {
+            width: 80px;
+        }
+
+        nav {
+            margin-right: 20px;
+
+            a {
+                padding: 10px;
+                text-decoration: none;
+                color: #ffffff;
+
+                &:hover {
+                    border-bottom: 2px solid #247DE1;
+                }
+
+                &:active {
+                    border-bottom: 2px solid #E447A5;
+                }
+            }
+        }
+    }
+
+    main {
+        @include contenedor();
+
+        .txt-main {
+            @include caja();
+
+            h2 {
+                font-size: 50px;
+                margin: 15px;
+            }
+
+            p {
+                margin: 15px;
+            }
+
+            button {
+                @include boton();
+            }
+        }
+
+        .img-caja {
+            @include img-cajas();
+
+            img {
+                @include imagen();
+            }
+        }
+
+    }
+
+    .acerca {
+        @include contenedor();
+
+        .txt-acerca {
+            @include caja();
+        }
+
+        .img-caja {
+            @include img-cajas();
+
+            img {
+                @include imagen();
+            }
+        }
+    }
+
+    .servicios {
+        @include contenedor();
+        height: 100%;
+        flex-wrap: wrap;
+
+        .card {
+            background-color: white;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            border: 2px solid black;
+            margin: 20px;
+
+            &-header {
+                width: 100%;
+                display: block;
+                height: 50%;
+                background-color: #000000;
+            }
+
+            &-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 30%;
+
+                &-title {
+                    margin-top: 2rem;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                &-contenedorblast {
+                    border-radius: 50%;
+                    /*Se pone la imagen en medio*/
+                    margin-top: -10rem;
+
+                    &-img {
+                        padding: 5px;
+                    }
+                }
+            }
+
+            &-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 20%;
+
+                a {
+                    @include boton();
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .trabajo {
+        @include contenedor();
+
+        p {
+            padding: 50px;
+            text-align: center;
+        }
+
+        img {
+            @include imagen();
+        }
+    }
+
+    .contacto {
+        @include contenedor();
+        background-color: #000000;
+        .imagen-caja{
+            @include img-cajas();
+            img {
+                @include imagen();
+            }
+        }
+        
+
+        .area-contacto {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+            width: 50%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                
+
+                select,
+                input,
+                textarea {
+                    margin: 10px;
+                    width: 100%;
+                    padding: 15px;
+                    color: #5e5e5e;
+                    border: none;
+                    font-family: sans-serif;
+                }
+
+                .btn-enviar {
+                    @include boton();
+                }
+            }
+        }
+    }
+
+    .redes {
+        @include contenedor();
+
+        .img-caja {
+            @include caja();
+
+            img {
+                @include imagen();
+            }
+        }
+
+        .redes-sociales {
+            @include caja();
+            flex-direction: row;
+
+            a {
+                ion-icon {
+                    font-size: 60px;
+                    margin: 10px;
+                    color: black;
+
+                    &:hover {
+                        color: #1262be;
+                    }
+
+                    &:active {
+                        color: #E447A5;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 30px;
+
+        p {}
+    }
+}
+
+@media (max-width: 680px) {
+    header{
+        visibility: hidden;
+    }
+
+    main{
+        flex-direction: column;
+        height: 100% !important;
+        .txt-main {
+            width: 100% !important;
+        }
+    }
+
+    .acerca{
+        flex-direction: column;
+        height: 100% !important;
+        .txt-acerca{
+            width: 100% !important;
+        }
+    }
+
+    .servicios{
+        flex-direction: column;
+        height: 100% !important;
+        flex-direction: column;
+        height: 100% !important;
+        .txt-servicios{
+            width: 100% !important;
+        }
+    }
+
+    .trabajo{
+        flex-direction: column;
+        height: 100% !important;
+    }
+
+    .contacto{
+        flex-direction: column;
+        height: 100% !important;
+        .area-contacto {
+            width: 100% !important;
+        }
+            
+
+    }
+
+    .redes{
+        flex-direction: column;
+        height: 100% !important;
+    }
+}
